@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rent vs. Own: The Math Nobody Shows You — NEXIMIOUS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0b0b0b; --paper:#efe7d2; --paper-dim:#e2d8bd;
+    --chrome-1:#f4f4f4; --chrome-2:#a8a8a8; --chrome-3:#3d3d3d;
+    --gold:#c9a227; --gold-bright:#e8c757; --blood:#b31f2e;
+    --money:#1f4d3a; --money-bright:#2e7d54;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at top left, #161616 0%, var(--ink) 45%), var(--ink);
+    color:var(--paper);font-family:'Libre Baskerville', serif;-webkit-font-smoothing:antialiased;}
+  a{color:var(--gold-bright);}
+  .display{font-family:'Anton', sans-serif;text-transform:uppercase;letter-spacing:0.01em;}
+  .chrome-text{background:linear-gradient(180deg,var(--chrome-1) 0%,var(--chrome-2) 28%,var(--chrome-3) 46%,var(--chrome-1) 55%,var(--chrome-2) 70%,#ffffff 78%,var(--chrome-3) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 0 #000) drop-shadow(0 4px 6px rgba(0,0,0,.6));}
+  header.masthead{padding:30px 20px 18px;text-align:center;border-bottom:3px solid var(--gold);
+    background:linear-gradient(180deg, rgba(201,162,39,0.08), transparent 60%);}
+  h1.logo{font-size:clamp(36px,8vw,70px);margin:0;line-height:0.9;}
+  nav.tabs{display:flex;justify-content:center;gap:0;flex-wrap:wrap;margin-top:18px;border-top:1px solid #333;border-bottom:1px solid #333;}
+  nav.tabs a{text-decoration:none;color:var(--paper);font-family:'Anton',sans-serif;letter-spacing:0.06em;font-size:13px;
+    padding:12px 18px;border-right:1px solid #333;}
+  nav.tabs a:last-child{border-right:none;}
+  nav.tabs a:hover{background:var(--blood);color:#fff;}
+
+  article{max-width:720px;margin:0 auto;padding:50px 24px 30px;}
+  .kicker{font-family:'Space Mono',monospace;color:var(--blood);background:#000;display:inline-block;
+    padding:4px 10px;font-size:12px;letter-spacing:.15em;border:1px solid var(--blood);margin-bottom:16px;}
+  h2.headline{font-family:'Anton',sans-serif;font-size:clamp(32px,6vw,52px);line-height:1.02;margin:0 0 18px;}
+  .dek{font-size:18px;line-height:1.55;color:var(--paper-dim);font-style:italic;border-left:3px solid var(--gold);
+    padding-left:16px;margin-bottom:20px;}
+  .byline{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;color:var(--gold-bright);margin-bottom:36px;}
+  p{font-size:17px;line-height:1.75;color:var(--paper-dim);margin:0 0 20px;}
+  p:first-of-type::first-letter{
+    font-family:'Anton',sans-serif;font-size:64px;line-height:44px;float:left;
+    margin:6px 8px 0 0;color:var(--gold-bright);
+  }
+  h3{font-family:'Anton',sans-serif;font-size:22px;color:var(--gold-bright);margin:38px 0 14px;letter-spacing:.02em;}
+  .pullquote{font-family:'Anton',sans-serif;font-size:clamp(22px,4vw,30px);line-height:1.25;color:#fff;
+    text-align:center;margin:40px 0;padding:24px 10px;border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);}
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:34px 0;}
+  @media(max-width:600px){.stat-row{grid-template-columns:1fr;}}
+  .stat{background:var(--paper);color:var(--ink);padding:18px;text-align:center;border:1px solid #000;box-shadow:4px 4px 0 rgba(0,0,0,.5);}
+  .stat .num{font-family:'Anton',sans-serif;font-size:28px;}
+  .stat .lbl{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;color:#555;margin-top:4px;}
+  .disclaimer{margin-top:44px;padding:16px 18px;border-left:3px solid var(--blood);background:rgba(179,31,46,.08);
+    font-size:14px;color:var(--paper-dim);}
+  .related{max-width:720px;margin:0 auto;padding:0 24px 60px;}
+  .related h4{font-family:'Anton',sans-serif;font-size:14px;letter-spacing:.1em;color:var(--gold-bright);border-top:1px solid #333;padding-top:20px;}
+  .related a{display:block;font-family:'Libre Baskerville',serif;font-style:italic;color:var(--paper);margin:8px 0;}
+  footer{padding:30px 20px 60px;text-align:center;font-family:'Space Mono',monospace;font-size:11px;color:#777;border-top:1px solid #222;}
+  footer a{margin:0 8px;color:#999;}
+</style>
+</head>
+<body>
+
+  <header class="masthead">
+    <h1 class="logo display chrome-text">NEXIMIOUS</h1>
+    <nav class="tabs">
+      <a href="index.html">HOME</a>
+      <a href="index.html#reports">STREET REPORTS</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <a href="privacy-policy.html">PRIVACY</a>
+      <a href="terms.html">TERMS</a>
+    </nav>
+  </header>
+
+  <article>
+    <span class="kicker">◆ REAL TALK</span>
+    <h2 class="headline">RENT VS. OWN: THE MATH NOBODY SHOWS YOU</h2>
+    <p class="dek">"Renting is throwing money away" is one of the most repeated — and least examined — pieces of financial folk wisdom out there. The real comparison depends on math most people never actually run.</p>
+    <div class="byline">WORDS BY THE NEXIMIOUS DESK · 11 MIN READ</div>
+
+    <p>The rent-versus-own debate usually gets reduced to a single sentence: renting is "throwing money away" because you build no equity, while a mortgage payment builds equity in an asset you own. That framing skips almost everything that actually determines which choice makes financial sense — the size of the down payment, the interest rate, how long you plan to stay, and the ongoing costs of ownership that don't show up in a mortgage calculator's headline number.</p>
+
+    <h3>What a Mortgage Payment Doesn't Include</h3>
+    <p>A common mistake is comparing rent directly to a mortgage principal-and-interest payment. Ownership carries real ongoing costs beyond that: property taxes, homeowners insurance, maintenance and repairs (a widely used estimate is 1–2% of the home's value per year, though this varies significantly by property age and condition), and if applicable, HOA fees. Add these together and the true monthly cost of ownership is often meaningfully higher than the mortgage payment alone suggests.</p>
+
+    <p>On the renting side, the comparison should include what a renter does with the money they're not putting into a down payment or ownership costs. If that difference is actually invested rather than spent, renting can build wealth too — just through a different asset than home equity.</p>
+
+    <h3>The Break-Even Timeline Is the Real Question</h3>
+    <p>Buying a home involves significant upfront transaction costs — closing costs typically run somewhere around 2–5% of the purchase price, and selling later typically costs another 6–10% or so once real estate agent commissions and other selling costs are factored in. These costs mean owning usually only "wins" financially over renting if you stay long enough to spread that upfront cost across enough years. Move again in two years and those transaction costs alone can erase any equity gained.</p>
+
+    <div class="pullquote">The question isn't "should I rent or own." It's "how long am I actually going to stay" — because that number changes the answer more than almost anything else.</div>
+
+    <p>A reasonable rule of thumb many financial planners use is that buying starts to make more sense than renting somewhere around the five-to-seven-year mark of staying in one place, though this varies a great deal by local market conditions, how fast home prices and rents are moving in a given area, and the specific mortgage terms available. There are free rent-vs-buy calculators from reputable sources that let you plug in your actual numbers — mortgage rate, home price, rent, expected time in the home — rather than relying on a generic rule of thumb.</p>
+
+    <h3>Home Equity Isn't as Liquid as It Feels</h3>
+    <p>Equity in a home is real wealth, but it isn't the same as cash in a brokerage or savings account. Accessing it generally requires selling the home, taking out a home equity loan or line of credit (which is still debt, with its own interest and closing costs), or a cash-out refinance. This illiquidity is worth weighing against the flexibility of building wealth in more liquid investments, especially for people who value being able to relocate easily for career opportunities or personal reasons.</p>
+
+    <h3>What Renting Actually Offers</h3>
+    <p>Renting isn't just the "loser" side of this comparison — it offers real advantages that are easy to undervalue. Flexibility to relocate without transaction costs. No exposure to a downturn in a specific local housing market. No responsibility for major repairs like a roof or HVAC system failing. And if the money that would have gone toward a down payment and ownership costs is instead invested consistently, historical long-run stock market returns have, over many multi-decade periods, outpaced typical home price appreciation — though this varies by time period and specific market, and past performance never guarantees future results.</p>
+
+    <div class="stat-row">
+      <div class="stat"><div class="num">2–5%</div><div class="lbl">TYPICAL CLOSING COSTS ON PURCHASE</div></div>
+      <div class="stat"><div class="num">6–10%</div><div class="lbl">TYPICAL COSTS TO SELL LATER</div></div>
+      <div class="stat"><div class="num">5–7 YRS</div><div class="lbl">ROUGH BREAK-EVEN RULE OF THUMB</div></div>
+    </div>
+
+    <h3>Questions Worth Answering Before Deciding</h3>
+    <p>How confident are you in staying in this specific location for at least five years? Is the local rent-to-price ratio favorable, or are home prices unusually elevated relative to rents in this particular market right now? Do you have both the down payment and a separate, fully funded emergency reserve — buying a home with a down payment that wipes out your emergency savings creates real risk if a major repair or job loss happens soon after. And honestly: if you rented instead and invested the difference, would you actually do it consistently, or would that money just get spent?</p>
+
+    <p>There's no universally correct answer here — only a correct answer for a specific person's timeline, local market, and financial situation. Anyone telling you renting is always wasteful, or that buying is always the smarter move, is skipping the math that actually determines the answer.</p>
+
+    <div class="disclaimer">This article is for general educational purposes only and is not personalized financial or real estate advice. Local market conditions vary significantly — consult a qualified financial advisor or real estate professional for guidance specific to your situation.</div>
+  </article>
+
+  <div class="related">
+    <h4>MORE FROM NEXIMIOUS</h4>
+    <a href="credit-score-glowup.html">The Credit Score Glow-Up: 500 to 750</a>
+    <a href="retirement-100-a-month.html">The $100 a Month That Becomes $200K</a>
+    <a href="hidden-fees-exposed.html">Exposed: The Fees Quietly Eating Your Portfolio</a>
+  </div>
+
+  <footer>
+    <div>© 2026 NEXIMIOUS MEDIA GROUP — ALL RIGHTS RESERVED</div>
+    <div style="margin-top:10px;">
+      <a href="index.html">Home</a>·<a href="about.html">About</a>·<a href="contact.html">Contact</a>·<a href="privacy-policy.html">Privacy</a>·<a href="terms.html">Terms</a>
+    </div>
+  </footer>
+
+</body>
+</html>
