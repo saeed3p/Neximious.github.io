@@ -22,19 +22,19 @@
 <meta property="og:description" content="Real personal finance content on side hustles, credit, real estate, retirement, and markets — no jargon, no gatekeeping.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://neximious.com/">
-<meta property="og:image" content="https://neximious.com/images/cover-triumph.jpg">
+<meta property="og:image" content="https://neximious.com/images/retirement-100-a-month-hero.png">
 <meta property="og:site_name" content="Neximious">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NEXIMIOUS — The Money Movement Magazine">
 <meta name="twitter:description" content="Real personal finance content on side hustles, credit, real estate, retirement, and markets — no jargon, no gatekeeping.">
-<meta name="twitter:image" content="https://neximious.com/images/cover-triumph.jpg">
+<meta name="twitter:image" content="https://neximious.com/images/retirement-100-a-month-hero.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Neximious",
   "url": "https://neximious.com/",
-  "logo": "https://neximious.com/images/cover-triumph.jpg",
+  "logo": "https://neximious.com/images/retirement-100-a-month-hero.png",
   "sameAs": []
 }
 </script>
@@ -83,7 +83,7 @@
     pointer-events:none;
     z-index:999;
     opacity:0.05;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23n)'/%3E%3C/svg%3E");
     mix-blend-mode:overlay;
   }
 
@@ -707,7 +707,7 @@
   <header class="masthead">
     <div class="issue-line">★ THE MONEY MOVEMENT MAGAZINE ★</div>
     <h1 class="logo display chrome-text">NEXIMIOUS</h1>
-    <div class="tagline">GET MONEY. STACK MONEY. GROW MONEY.</div>
+    <div class="tagline">GET MONEY. STAY MONEY. KNOW MONEY.</div>
 
     <nav class="tabs">
       <a href="#cover">COVER STORY</a>
@@ -721,17 +721,40 @@
 
   <div class="ticker-wrap">
     <div class="ticker mono">
-      <span>NDX <span class="up">▲ 2.4%</span> — TECH MONEY KEEPS STACKING</span>
-      <span>10-YR YIELD <span class="down">▼ 0.08</span> — BONDS CATCHING A BREAK</span>
-      <span>GOLD <span class="up">▲ $41</span> — OG HUSTLERS WERE RIGHT AGAIN</span>
+      <span>NASDAQ COMPOSITE <span class="down">▼ 1.6%</span> — CHIP STOCKS DRAG THE TAPE</span>
+      <span>10-YR YIELD <span class="up">▲ 4.62%</span> — MIDEAST TENSIONS PUSH RATES UP</span>
+      <span>GOLD $4,020/OZ <span class="down">▼ 2.1%</span> — EVEN THE SAFE HAVEN TOOK A HIT</span>
       <span>ROTH IRA LIMIT 2026: $7,500 — LOCK IT IN</span>
-      <span>BTC <span class="up">▲ 5.1%</span> — THE BLOCK IS HOT</span>
-      <span>SAVINGS RATE NATIONAL AVG: 4.3% — STILL NOT ENOUGH, RAISE IT</span>
-      <span>NDX <span class="up">▲ 2.4%</span> — TECH MONEY KEEPS STACKING</span>
-      <span>10-YR YIELD <span class="down">▼ 0.08</span> — BONDS CATCHING A BREAK</span>
-      <span>GOLD <span class="up">▲ $41</span> — OG HUSTLERS WERE RIGHT AGAIN</span>
+      <span>BTC <span id="btc-ticker">LOADING...</span></span>
+      <span>EMERGENCY FUND RULE OF THUMB: 3–6 MONTHS EXPENSES — READ THE BREAKDOWN</span>
+      <span class="mono" style="opacity:.6;">MARKET DATA SNAPSHOT AS OF JUL 13, 2026 · BTC PRICE UPDATES LIVE</span>
+      <span>NASDAQ COMPOSITE <span class="down">▼ 1.6%</span> — CHIP STOCKS DRAG THE TAPE</span>
+      <span>10-YR YIELD <span class="up">▲ 4.62%</span> — MIDEAST TENSIONS PUSH RATES UP</span>
+      <span>GOLD $4,020/OZ <span class="down">▼ 2.1%</span> — EVEN THE SAFE HAVEN TOOK A HIT</span>
     </div>
   </div>
+  <script>
+    fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true')
+      .then(function(res){ return res.json(); })
+      .then(function(data){
+        var btc = data.bitcoin;
+        if (!btc) return;
+        var price = Math.round(btc.usd).toLocaleString();
+        var change = btc.usd_24h_change;
+        var arrow = change >= 0 ? '▲' : '▼';
+        var cls = change >= 0 ? 'up' : 'down';
+        var pct = Math.abs(change).toFixed(1);
+        document.querySelectorAll('#btc-ticker').forEach(function(el){
+          el.innerHTML = '$' + price + ' <span class="' + cls + '">' + arrow + ' ' + pct + '%</span> — LIVE PRICE';
+        });
+      })
+      .catch(function(){
+        document.querySelectorAll('#btc-ticker').forEach(function(el){
+          el.innerHTML = '$62,336 <span class="down">▼ 2.2%</span> — THE BLOCK COOLED OFF';
+        });
+      });
+  </script>
+
 
   <section id="cover" class="cover">
     <div class="cover-art">
@@ -825,13 +848,118 @@
       <a class="card" href="hidden-fees-exposed.html">
         <div class="thumb" data-tag="EXPOSED">
           <div class="thumb-art">
-            <img class="thumb-photo" src="images/hidden-fees-exposed-hero.png" alt="Illustration of a woman reviewing a financial statement at night with fee percentages and dollar signs floating around her desk">
+            <img class="thumb-photo" src="images/hidden-fees-exposed-hero.jpg" alt="Split illustration contrasting a stressful 5% fast food transaction fee with a peaceful .01% retirement scene of a couple on a cruise, illustrating how small fees compound over time">
           </div>
         </div>
         <div class="body">
           <h4>EXPOSED: THE FEES QUIETLY EATING YOUR PORTFOLIO</h4>
           <p>Expense ratios, advisory fees, trading costs — none show up as a single line item. Here's how to actually audit what you're paying.</p>
           <div class="meta"><span>INVESTIGATIONS</span><span>9 MIN</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="emergency-fund.html">
+        <div class="thumb" data-tag="SAFETY NET">
+          <div class="thumb-art">
+            <img class="thumb-photo" src="images/emergency-fund-hero.jpg" alt="Illustration of a family looking at a home computer showing a savings tracker with progress toward a home down payment goal">
+          </div>
+        </div>
+        <div class="body">
+          <h4>THE EMERGENCY FUND NUMBER NOBODY AGREES ON</h4>
+          <p>Three months of expenses? Six? A flat $1,000? Here's how to actually pick your target and where to keep the money.</p>
+          <div class="meta"><span>WEALTH DESK</span><span>8 MIN</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="debt-payoff-strategy.html">
+        <div class="thumb" data-tag="DEBT">
+          <div class="thumb-art">
+            <img class="thumb-photo" src="images/debt-payoff-strategy-hero.jpg" alt="Illustration of a woman working on a laptop with holographic Avalanche and Snowball debt payoff method visuals floating around her">
+          </div>
+        </div>
+        <div class="body">
+          <h4>AVALANCHE VS. SNOWBALL: THE DEBT PAYOFF FIGHT, SETTLED</h4>
+          <p>One method saves you the most money. The other, you're more likely to actually finish. Here's how to pick.</p>
+          <div class="meta"><span>CREDIT DESK</span><span>9 MIN</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="first-time-investing.html">
+        <div class="thumb" data-tag="INVESTING 101">
+          <div class="thumb-art">
+            <img class="thumb-photo" src="images/first-time-investing-hero.jpg" alt="Illustration of a young woman checking investment charts on her phone at a coffee shop, with glowing stock candlestick charts in the background">
+          </div>
+        </div>
+        <div class="body">
+          <h4>OPENING YOUR FIRST BROKERAGE ACCOUNT</h4>
+          <p>Account types, order types, and the handful of decisions that actually matter — without the jargon overload.</p>
+          <div class="meta"><span>MARKETS DESK</span><span>10 MIN</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="budgeting-frameworks.html">
+        <div class="thumb" data-tag="BUDGETING">
+          <div class="thumb-art">
+            <div class="speedlines"></div>
+            <svg viewBox="0 0 300 190" xmlns="http://www.w3.org/2000/svg">
+              <rect x="70" y="60" width="55" height="75" rx="4" fill="#2e7d54" stroke="#000" stroke-width="3"/>
+              <rect x="135" y="60" width="55" height="75" rx="4" fill="#e8c757" stroke="#000" stroke-width="3"/>
+              <rect x="200" y="60" width="55" height="75" rx="4" fill="#b31f2e" stroke="#000" stroke-width="3"/>
+              <text x="97" y="105" font-family="Anton" font-size="20" fill="#000" text-anchor="middle">50</text>
+              <text x="162" y="105" font-family="Anton" font-size="20" fill="#000" text-anchor="middle">30</text>
+              <text x="227" y="105" font-family="Anton" font-size="20" fill="#fff" text-anchor="middle">20</text>
+            </svg>
+            <div class="halftone"></div>
+          </div>
+        </div>
+        <div class="body">
+          <h4>WHICH BUDGET ACTUALLY WORKS?</h4>
+          <p>50/30/20 vs. zero-based vs. cash envelope — compared honestly, so you can stop switching every few months.</p>
+          <div class="meta"><span>WEALTH DESK</span><span>9 MIN</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="salary-negotiation.html">
+        <div class="thumb" data-tag="HUSTLE">
+          <div class="thumb-art">
+            <div class="speedlines"></div>
+            <svg viewBox="0 0 300 190" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="90,150 90,110 150,80 210,110 210,150" fill="#3d3d3d" stroke="#000" stroke-width="4"/>
+              <path d="M110,150 L110,120 L150,105 L190,120 L190,150" fill="#efe7d2" stroke="#000" stroke-width="2"/>
+              <text x="150" y="145" font-family="Anton" font-size="18" fill="#000" text-anchor="middle">$$</text>
+              <g>
+                <circle cx="230" cy="60" r="16" fill="#e8c757" stroke="#000" stroke-width="3"/>
+                <text x="230" y="66" font-family="Anton" font-size="16" fill="#000" text-anchor="middle">↑</text>
+              </g>
+            </svg>
+            <div class="halftone"></div>
+          </div>
+        </div>
+        <div class="body">
+          <h4>THE SALARY NEGOTIATION SCRIPT NOBODY TEACHES YOU</h4>
+          <p>Most people leave money on the table not by asking for too much, but by never asking at all.</p>
+          <div class="meta"><span>HUSTLE DESK</span><span>9 MIN</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="understanding-your-paycheck.html">
+        <div class="thumb" data-tag="PAYCHECK">
+          <div class="thumb-art">
+            <div class="speedlines"></div>
+            <svg viewBox="0 0 300 190" xmlns="http://www.w3.org/2000/svg">
+              <rect x="75" y="45" width="150" height="100" rx="4" fill="#efe7d2" stroke="#000" stroke-width="4"/>
+              <line x1="95" y1="70" x2="205" y2="70" stroke="#000" stroke-width="3"/>
+              <line x1="95" y1="90" x2="205" y2="90" stroke="#999" stroke-width="2"/>
+              <line x1="95" y1="105" x2="205" y2="105" stroke="#999" stroke-width="2"/>
+              <line x1="95" y1="120" x2="160" y2="120" stroke="#b31f2e" stroke-width="3"/>
+            </svg>
+            <div class="halftone"></div>
+          </div>
+        </div>
+        <div class="body">
+          <h4>READING YOUR PAYCHECK: WHAT THE DEDUCTIONS MEAN</h4>
+          <p>Federal withholding, FICA, gross vs. net — a plain-language breakdown of every line on a typical paycheck.</p>
+          <div class="meta"><span>WEALTH DESK</span><span>8 MIN</span></div>
         </div>
       </a>
     </div>
