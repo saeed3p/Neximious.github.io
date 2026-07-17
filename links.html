@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neximious — Links</title>
+<meta name="description" content="All the latest from Neximious — the money movement magazine. Tap any link below.">
+<link rel="canonical" href="https://neximious.com/links.html">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0b0b0b; --paper:#efe7d2; --paper-dim:#e2d8bd;
+    --chrome-1:#f4f4f4; --chrome-2:#a8a8a8; --chrome-3:#3d3d3d;
+    --gold:#c9a227; --gold-bright:#e8c757; --blood:#b31f2e;
+    --money:#1f4d3a; --money-bright:#2e7d54;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    min-height:100vh;
+    background:radial-gradient(ellipse at top left, #161616 0%, var(--ink) 45%), var(--ink);
+    color:var(--paper);
+    font-family:'Libre Baskerville', serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    justify-content:center;
+  }
+  .wrap{
+    width:100%;
+    max-width:480px;
+    padding:40px 20px 60px;
+  }
+  .display{font-family:'Anton', sans-serif;text-transform:uppercase;letter-spacing:0.01em;}
+  .chrome-text{
+    background:linear-gradient(180deg,var(--chrome-1) 0%,var(--chrome-2) 28%,var(--chrome-3) 46%,var(--chrome-1) 55%,var(--chrome-2) 70%,#ffffff 78%,var(--chrome-3) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;padding-left:0.08em;display:inline-block;
+    filter:drop-shadow(0 2px 0 #000) drop-shadow(0 4px 6px rgba(0,0,0,.6));
+  }
+
+  header{text-align:center;margin-bottom:28px;}
+  .logo{font-size:clamp(38px,12vw,52px);margin:0;line-height:0.9;}
+  .tagline{
+    font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.3em;
+    color:var(--paper-dim);margin-top:10px;
+  }
+
+  .avatar-ring{
+    width:76px;height:76px;border-radius:50%;
+    border:3px solid var(--gold);
+    margin:0 auto 16px;
+    background:linear-gradient(160deg,#1f4d3a,#0b0b0b 70%);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 0 0 3px #000, 0 6px 16px rgba(0,0,0,.5);
+  }
+  .avatar-ring span{
+    font-family:'Anton',sans-serif;font-size:32px;color:var(--gold-bright);
+  }
+
+  .section-label{
+    font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.2em;
+    color:var(--gold-bright);text-align:center;margin:26px 0 14px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .section-label::before,.section-label::after{
+    content:"";flex:1;height:1px;background:#333;
+  }
+
+  a.link-btn{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    background:var(--paper);
+    color:var(--ink);
+    border:1px solid #000;
+    box-shadow:4px 4px 0 rgba(0,0,0,.5);
+    padding:16px 18px;
+    margin-bottom:14px;
+    transition:transform .12s;
+  }
+  a.link-btn:hover, a.link-btn:active{
+    transform:translate(-2px,-2px);
+    box-shadow:6px 6px 0 rgba(0,0,0,.5);
+  }
+  a.link-btn .tag{
+    font-family:'Space Mono',monospace;
+    font-size:9px;letter-spacing:.08em;
+    background:var(--blood);color:#fff;
+    padding:3px 7px;flex-shrink:0;
+  }
+  a.link-btn .txt{
+    font-family:'Anton',sans-serif;
+    font-size:15px;line-height:1.2;
+    letter-spacing:.01em;
+  }
+  a.link-btn.featured{
+    background:linear-gradient(180deg,var(--gold-bright),var(--gold));
+    box-shadow:4px 4px 0 rgba(0,0,0,.6);
+  }
+  a.link-btn.featured .tag{background:#000;color:var(--gold-bright);}
+
+  .social-row{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    margin-top:30px;
+  }
+  .social-row a{
+    width:42px;height:42px;
+    border:2px solid var(--gold);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--paper);
+    text-decoration:none;
+    transition:transform .12s;
+  }
+  .social-row a:hover{transform:translateY(-2px);border-color:var(--gold-bright);}
+  .social-row svg{width:18px;height:18px;fill:currentColor;}
+
+  footer{
+    text-align:center;margin-top:36px;
+    font-family:'Space Mono',monospace;font-size:10px;color:#777;
+  }
+</style>
+</head>
+<body>
+
+  <div class="wrap">
+    <header>
+      <div class="avatar-ring"><span>N</span></div>
+      <h1 class="logo display chrome-text">NEXIMIOUS</h1>
+      <div class="tagline">GET MONEY. STACK MONEY. GROW MONEY.</div>
+    </header>
+
+    <a class="link-btn featured" href="https://neximious.com/" target="_blank" rel="noopener">
+      <span class="tag">HOME</span>
+      <span class="txt">Visit the Full Site</span>
+    </a>
+
+    <div class="section-label">LATEST READS</div>
+
+    <a class="link-btn" href="https://neximious.com/salary-negotiation.html" target="_blank" rel="noopener">
+      <span class="tag">HUSTLE</span>
+      <span class="txt">The Salary Negotiation Script Nobody Teaches You</span>
+    </a>
+    <a class="link-btn" href="https://neximious.com/retirement-100-a-month.html" target="_blank" rel="noopener">
+      <span class="tag">RETIRE</span>
+      <span class="txt">The $100 a Month That Becomes $200K</span>
+    </a>
+    <a class="link-btn" href="https://neximious.com/first-time-investing.html" target="_blank" rel="noopener">
+      <span class="tag">MARKETS</span>
+      <span class="txt">Opening Your First Brokerage Account</span>
+    </a>
+    <a class="link-btn" href="https://neximious.com/understanding-your-paycheck.html" target="_blank" rel="noopener">
+      <span class="tag">WEALTH</span>
+      <span class="txt">Reading Your Paycheck: What the Deductions Mean</span>
+    </a>
+
+    <div class="section-label">READER FAVORITES</div>
+
+    <a class="link-btn" href="https://neximious.com/credit-score-glowup.html" target="_blank" rel="noopener">
+      <span class="tag">CREDIT</span>
+      <span class="txt">The Credit Score Glow-Up: 500 to 750</span>
+    </a>
+    <a class="link-btn" href="https://neximious.com/budgeting-frameworks.html" target="_blank" rel="noopener">
+      <span class="tag">WEALTH</span>
+      <span class="txt">Which Budget Actually Works?</span>
+    </a>
+    <a class="link-btn" href="https://neximious.com/rent-vs-own.html" target="_blank" rel="noopener">
+      <span class="tag">REAL TALK</span>
+      <span class="txt">Rent vs. Own: The Math Nobody Shows You</span>
+    </a>
+
+    <div class="section-label">STAY CONNECTED</div>
+
+    <a class="link-btn" href="https://neximious.com/#subscribe" target="_blank" rel="noopener">
+      <span class="tag">FREE</span>
+      <span class="txt">Get the Weekly Money Drop — Subscribe</span>
+    </a>
+
+    <div class="social-row">
+      <a href="https://facebook.com/neximious" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.462h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+      </a>
+      <a href="https://instagram.com/neximious" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.332.014 7.052.072 2.695.272.273 2.69.073 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.332 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </a>
+      <a href="https://twitter.com/neximious" target="_blank" rel="noopener" aria-label="X">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </div>
+
+    <footer>© 2026 NEXIMIOUS MEDIA GROUP</footer>
+  </div>
+
+</body>
+</html>
