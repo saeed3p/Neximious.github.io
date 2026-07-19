@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ET9YBXHCKQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ET9YBXHCKQ');
+</script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4470117404498691"
+     crossorigin="anonymous"></script>
+<!-- Infolinks -->
+<script type="text/javascript">
+var infolinks_pid = 3446603;
+var infolinks_wsid = 0;
+</script>
+<script type="text/javascript" src="https://resources.infolinks.com/js/infolinks_main.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Archive — Back Issues & All Articles — Neximious</title>
+<meta name="description" content="Browse every past issue of Neximious and search the full article archive by topic, headline, or keyword.">
+<link rel="canonical" href="https://neximious.com/archive.html">
+<meta property="og:title" content="The Archive — Neximious">
+<meta property="og:description" content="Browse every past issue and search the full Neximious article archive.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://neximious.com/archive.html">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0b0b0b; --paper:#efe7d2; --paper-dim:#e2d8bd;
+    --chrome-1:#f4f4f4; --chrome-2:#a8a8a8; --chrome-3:#3d3d3d;
+    --gold:#c9a227; --gold-bright:#e8c757; --blood:#b31f2e;
+    --money:#1f4d3a; --money-bright:#2e7d54;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:radial-gradient(ellipse at top left, #161616 0%, var(--ink) 45%), var(--ink);
+    color:var(--paper);
+    font-family:'Libre Baskerville', serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .display{font-family:'Anton', sans-serif;text-transform:uppercase;letter-spacing:0.01em;}
+  .chrome-text{
+    background:linear-gradient(180deg,var(--chrome-1) 0%,var(--chrome-2) 28%,var(--chrome-3) 46%,var(--chrome-1) 55%,var(--chrome-2) 70%,#ffffff 78%,var(--chrome-3) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;padding-left:0.08em;display:inline-block;
+    filter:drop-shadow(0 2px 0 #000) drop-shadow(0 4px 6px rgba(0,0,0,.6));
+  }
+  header.masthead{
+    padding:30px 20px 18px;text-align:center;border-bottom:3px solid var(--gold);
+    background:linear-gradient(180deg, rgba(201,162,39,0.08), transparent 60%);
+  }
+  p.logo{font-size:clamp(46px,10vw,90px);margin:0;line-height:0.9;}
+  nav.tabs{
+    display:flex;justify-content:center;gap:0;flex-wrap:wrap;margin-top:18px;
+    border-top:1px solid #333;border-bottom:1px solid #333;
+  }
+  nav.tabs a{
+    text-decoration:none;color:var(--paper);font-family:'Anton',sans-serif;letter-spacing:0.06em;font-size:13px;
+    padding:12px 18px;border-right:1px solid #333;
+  }
+  nav.tabs a:last-child{border-right:none;}
+  nav.tabs a:hover{background:var(--blood);color:#fff;}
+  nav.tabs a.current{background:var(--gold);color:#000;}
+
+  .page-head{max-width:1100px;margin:0 auto;padding:50px 20px 20px;text-align:center;}
+  .page-head .kicker{
+    font-family:'Space Mono',monospace;color:var(--blood);background:#000;display:inline-block;
+    padding:4px 10px;font-size:12px;letter-spacing:.15em;border:1px solid var(--blood);margin-bottom:16px;
+  }
+  .page-head h1{font-size:clamp(32px,6vw,56px);margin:0 0 14px;}
+  .page-head p{font-size:17px;color:var(--paper-dim);max-width:640px;margin:0 auto;line-height:1.6;}
+
+  .section{max-width:1100px;margin:0 auto;padding:40px 20px;}
+  .section-head{
+    display:flex;align-items:baseline;gap:16px;margin-bottom:24px;
+    border-bottom:2px solid var(--gold);padding-bottom:10px;
+  }
+  .section-head h2{font-size:clamp(24px,4vw,34px);margin:0;font-family:'Anton',sans-serif;text-transform:uppercase;}
+  .section-head .sub{font-family:'Space Mono',monospace;font-size:12px;color:var(--gold-bright);letter-spacing:.1em;}
+
+  /* Past Issues */
+  .issues-row{display:grid;grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));gap:20px;}
+  .issue-card{
+    background:var(--paper);color:var(--ink);border:1px solid #000;
+    box-shadow:5px 5px 0 rgba(0,0,0,.5);text-decoration:none;
+    display:block;padding:0;overflow:hidden;transition:transform .12s;
+  }
+  .issue-card:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 rgba(0,0,0,.5);}
+  .issue-cover{
+    height:140px;background:linear-gradient(160deg,#1f4d3a,#0b0b0b 70%);
+    display:flex;align-items:center;justify-content:center;border-bottom:3px solid var(--gold);
+    position:relative;
+  }
+  .issue-cover .num{font-family:'Anton',sans-serif;font-size:44px;color:rgba(232,199,87,.9);}
+  .issue-card .issue-info{padding:16px 18px;}
+  .issue-card .issue-info .label{font-family:'Space Mono',monospace;font-size:11px;color:var(--blood);letter-spacing:.1em;}
+  .issue-card .issue-info h3{font-family:'Anton',sans-serif;font-size:18px;margin:6px 0 4px;}
+  .issue-card .issue-info .date{font-family:'Space Mono',monospace;font-size:11px;color:#666;}
+  .issue-placeholder{
+    border:2px dashed #444;display:flex;align-items:center;justify-content:center;
+    color:#666;font-family:'Space Mono',monospace;font-size:12px;text-align:center;padding:30px 16px;
+    letter-spacing:.05em;
+  }
+
+  /* Search */
+  .search-wrap{margin-bottom:30px;}
+  .search-box{
+    display:flex;border:2px solid var(--gold);background:#111;
+  }
+  .search-box input{
+    flex:1;background:transparent;border:none;outline:none;color:var(--paper);
+    font-family:'Space Mono',monospace;font-size:15px;padding:16px 18px;
+  }
+  .search-box input::placeholder{color:#777;}
+  .search-box .icon{
+    display:flex;align-items:center;padding:0 18px;color:var(--gold-bright);font-family:'Anton',sans-serif;font-size:14px;
+  }
+  .search-meta{
+    font-family:'Space Mono',monospace;font-size:12px;color:var(--paper-dim);margin-top:10px;
+  }
+  .topic-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+  .topic-chip{
+    font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.05em;
+    background:var(--paper);color:var(--ink);border:1px solid #000;padding:6px 12px;
+    cursor:pointer;box-shadow:2px 2px 0 rgba(0,0,0,.5);transition:transform .1s;
+  }
+  .topic-chip:hover{transform:translate(-1px,-1px);}
+  .topic-chip.active{background:var(--gold);}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:600px){.grid{grid-template-columns:1fr;}}
+
+  .card{
+    text-decoration:none;background:var(--paper);color:var(--ink);border:1px solid #000;
+    box-shadow:6px 6px 0 rgba(0,0,0,.55);display:flex;flex-direction:column;transition:transform .15s;
+  }
+  .card:hover{transform:translate(-3px,-3px);}
+  .card .tagrow{padding:14px 18px 0;}
+  .card .tag{
+    font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.1em;
+    background:var(--blood);color:#fff;padding:3px 8px;display:inline-block;
+  }
+  .card .body{padding:12px 18px 20px;}
+  .card h4{font-family:'Anton',sans-serif;font-size:19px;margin:0 0 10px;line-height:1.1;}
+  .card p{font-size:14px;line-height:1.55;color:#333;margin:0;}
+  .no-results{
+    text-align:center;padding:60px 20px;color:var(--paper-dim);font-style:italic;
+  }
+
+  footer{
+    padding:30px 20px 60px;text-align:center;font-family:'Space Mono',monospace;font-size:11px;color:#777;
+    border-top:1px solid #222;
+  }
+  footer a{margin:0 8px;color:#999;}
+</style>
+</head>
+<body>
+
+  <header class="masthead">
+    <p class="logo display chrome-text" role="heading" aria-level="2">NEXIMIOUS</p>
+    <nav class="tabs">
+      <a href="index.html">HOME</a>
+      <a href="index.html#reports">STREET REPORTS</a>
+      <a href="archive.html" class="current">ARCHIVE</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <div class="page-head">
+    <span class="kicker">◆ BACK ISSUES</span>
+    <h1 class="display">THE ARCHIVE</h1>
+    <p>Every past issue of Neximious, plus the full article library — searchable by topic, headline, or keyword.</p>
+  </div>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Past Issues</h2>
+      <span class="sub">EVERY EDITION, ON RECORD</span>
+    </div>
+    <div class="issues-row">
+      <a class="issue-card" href="index.html">
+        <div class="issue-cover"><span class="num">001</span></div>
+        <div class="issue-info">
+          <div class="label">ISSUE 001</div>
+          <h3>Stacking Paper</h3>
+          <div class="date">Summer '26</div>
+        </div>
+      </a>
+      <a class="issue-card" href="issue-002.html">
+        <div class="issue-cover"><span class="num">002</span></div>
+        <div class="issue-info">
+          <div class="label">CURRENT ISSUE</div>
+          <h3>Milestones, Not Myths</h3>
+          <div class="date">Fall '26</div>
+        </div>
+      </a>
+      <div class="issue-placeholder">
+        Issue 003<br>coming soon
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Search the Archive</h2>
+      <span class="sub">25 ARTICLES AND GROWING</span>
+    </div>
+
+    <div class="search-wrap">
+      <div class="search-box">
+        <span class="icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search by topic, keyword, or headline — e.g. &quot;credit&quot;, &quot;retirement&quot;, &quot;budget&quot;...">
+      </div>
+      <div class="topic-chips" id="topicChips"></div>
+      <div class="search-meta" id="resultCount"></div>
+    </div>
+
+    <div class="grid" id="articleGrid"></div>
+    <div class="no-results" id="noResults" style="display:none;">No articles match that search. Try a different keyword or topic.</div>
+  </section>
+
+  <footer>
+    <div>© 2026 NEXIMIOUS MEDIA GROUP — ALL RIGHTS RESERVED</div>
+    <div style="margin-top:10px;">
+      <a href="index.html">Home</a>·<a href="about.html">About</a>·<a href="contact.html">Contact</a>·<a href="privacy-policy.html">Privacy</a>·<a href="terms.html">Terms</a>
+    </div>
+  </footer>
+
+<script>
+const articles = [
+  {title:"The Side Hustle Math Nobody Actually Runs", url:"side-hustle-math.html", tag:"WEALTH", desc:"Extra income sounds great until you price your own time. How to find your true hourly rate before you start."},
+  {title:"The Credit Score Glow-Up: 500 to 750", url:"credit-score-glowup.html", tag:"CREDIT", desc:"A step-by-step breakdown of the five factors that actually move your credit score, and a realistic timeline."},
+  {title:"Rent vs. Own: The Math Nobody Shows You", url:"rent-vs-own.html", tag:"REAL ESTATE", desc:"The real financial comparison between renting and buying, including hidden ownership costs and break-even timelines."},
+  {title:"The $100 a Month That Becomes $200K", url:"retirement-100-a-month.html", tag:"RETIREMENT", desc:"How compound growth works, and why starting early beats starting big."},
+  {title:"Exposed: The Fees Quietly Eating Your Portfolio", url:"hidden-fees-exposed.html", tag:"INVESTIGATIONS", desc:"Expense ratios, advisory fees, and trading costs can quietly cost tens of thousands over time."},
+  {title:"Who's Getting Paid: How to Read a \"Hot Sector\"", url:"market-movers.html", tag:"MARKETS", desc:"Sector performance rotates every year. Why chasing last year's winner is a documented way to underperform."},
+  {title:"The Emergency Fund Number Nobody Agrees On", url:"emergency-fund.html", tag:"WEALTH", desc:"Three months of expenses? Six? A flat $1,000? How to actually pick your target."},
+  {title:"Avalanche vs. Snowball: The Debt Payoff Fight, Settled", url:"debt-payoff-strategy.html", tag:"CREDIT", desc:"One method saves the most money. The other, you're more likely to actually finish."},
+  {title:"Opening Your First Brokerage Account: What Actually Matters", url:"first-time-investing.html", tag:"MARKETS", desc:"Account types, order types, and the handful of decisions that actually matter."},
+  {title:"Which Budget Actually Works?", url:"budgeting-frameworks.html", tag:"WEALTH", desc:"50/30/20 vs. zero-based vs. cash envelope — compared honestly."},
+  {title:"The Salary Negotiation Script Nobody Teaches You", url:"salary-negotiation.html", tag:"HUSTLE", desc:"Most people leave money on the table not by asking for too much, but by never asking at all."},
+  {title:"Reading Your Paycheck: What All Those Deductions Mean", url:"understanding-your-paycheck.html", tag:"WEALTH", desc:"Federal withholding, FICA, gross vs. net — a plain-language breakdown of every line."},
+  {title:"The Insurance You Actually Need vs. The Insurance You're Sold", url:"insurance-basics.html", tag:"WEALTH", desc:"Which insurance is genuinely essential, which is situational, and which is mostly upsell."},
+  {title:"Building Credit From Zero: The First 12 Months", url:"building-credit-from-scratch.html", tag:"CREDIT", desc:"No credit history at all? Exactly how to build a credit file from nothing."},
+  {title:"Taxes 101: What Actually Happens When You File", url:"taxes-101.html", tag:"WEALTH", desc:"Brackets, deductions, credits, refunds — a plain-language walkthrough of filing U.S. taxes."},
+  {title:"Your Rent Just Went Up: What You Can Actually Do", url:"negotiating-rent-increase.html", tag:"REAL ESTATE", desc:"A rent increase notice isn't always final. How to research your position and what to say."},
+  {title:"Index Funds vs. Picking Your Own Stocks", url:"index-funds-vs-stock-picking.html", tag:"MARKETS", desc:"The data on professional fund managers beating the market is not encouraging."},
+  {title:"Money and Relationships: The Conversation Most Couples Avoid", url:"money-and-relationships.html", tag:"WEALTH", desc:"Financial disagreements are a top predictor of relationship strain. How to structure the conversation."},
+  {title:"You've Been Breached: What Actually Matters After a Data Leak", url:"identity-theft-protection.html", tag:"INVESTIGATIONS", desc:"A data breach notification is alarming but rarely means immediate disaster. The prioritized checklist."},
+  {title:"Filing Taxes When You Have Side Income", url:"filing-taxes-side-income.html", tag:"HUSTLE", desc:"1099 income comes with tax obligations W-2 employees never deal with."},
+  {title:"HSA vs. FSA: The Account Nobody Explains Properly", url:"hsa-fsa-explained.html", tag:"WEALTH", desc:"Health Savings Accounts and Flexible Spending Accounts sound similar but work very differently."},
+  {title:"Buy Now, Pay Later: The Fine Print Nobody Reads", url:"buy-now-pay-later-risks.html", tag:"INVESTIGATIONS", desc:"The real risks of BNPL — stacking, credit reporting changes, and late fees."},
+  {title:"Financial Milestones by Decade", url:"financial-milestones-by-decade.html", tag:"RETIREMENT", desc:"Viral 'you should have X saved by age Y' charts cause more anxiety than clarity."},
+  {title:"Buying vs. Leasing a Car", url:"buying-vs-leasing-a-car.html", tag:"REAL ESTATE", desc:"The actual financial comparison depends on how long you keep the car."},
+  {title:"You Changed Jobs. What Happens to Your Old 401(k)?", url:"401k-rollover-job-change.html", tag:"RETIREMENT", desc:"Leaving a job doesn't mean losing your 401(k) — the options have very different consequences."}
+];
+
+const grid = document.getElementById('articleGrid');
+const noResults = document.getElementById('noResults');
+const resultCount = document.getElementById('resultCount');
+const searchInput = document.getElementById('searchInput');
+const topicChipsEl = document.getElementById('topicChips');
+
+let activeTopic = null;
+
+function renderChips(){
+  const topics = [...new Set(articles.map(a => a.tag))].sort();
+  topicChipsEl.innerHTML = topics.map(t =>
+    `<span class="topic-chip" data-topic="${t}">${t}</span>`
+  ).join('');
+  topicChipsEl.querySelectorAll('.topic-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const topic = chip.dataset.topic;
+      activeTopic = activeTopic === topic ? null : topic;
+      topicChipsEl.querySelectorAll('.topic-chip').forEach(c => c.classList.remove('active'));
+      if (activeTopic) chip.classList.add('active');
+      renderGrid();
+    });
+  });
+}
+
+function renderGrid(){
+  const query = searchInput.value.trim().toLowerCase();
+  const filtered = articles.filter(a => {
+    const matchesQuery = !query ||
+      a.title.toLowerCase().includes(query) ||
+      a.desc.toLowerCase().includes(query) ||
+      a.tag.toLowerCase().includes(query);
+    const matchesTopic = !activeTopic || a.tag === activeTopic;
+    return matchesQuery && matchesTopic;
+  });
+
+  if (filtered.length === 0){
+    grid.style.display = 'none';
+    noResults.style.display = 'block';
+  } else {
+    grid.style.display = 'grid';
+    noResults.style.display = 'none';
+    grid.innerHTML = filtered.map(a => `
+      <a class="card" href="${a.url}">
+        <div class="tagrow"><span class="tag">${a.tag}</span></div>
+        <div class="body">
+          <h4>${a.title}</h4>
+          <p>${a.desc}</p>
+        </div>
+      </a>
+    `).join('');
+  }
+
+  resultCount.textContent = query || activeTopic
+    ? `Showing ${filtered.length} of ${articles.length} articles`
+    : `Showing all ${articles.length} articles`;
+}
+
+searchInput.addEventListener('input', renderGrid);
+renderChips();
+renderGrid();
+</script>
+
+</body>
+</html>
