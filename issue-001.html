@@ -22,26 +22,26 @@ var infolinks_wsid = 0;
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NEXIMIOUS — Issue 002: Insurance, Credit & the Long Game</title>
-<meta name="description" content="Issue 002 of Neximious — insurance you actually need, building credit from zero, taxes, BNPL risk, and the financial milestones that actually matter by decade.">
-<link rel="canonical" href="https://neximious.com/">
-<meta property="og:title" content="NEXIMIOUS — Issue 002: Insurance, Credit & the Long Game">
-<meta property="og:description" content="Insurance you actually need, building credit from zero, taxes, BNPL risk, and the financial milestones that actually matter by decade.">
+<title>NEXIMIOUS — Issue 001: Stacking Paper (Archived Issue)</title>
+<meta name="description" content="Neximious is the personal finance magazine that talks straight — real articles on side hustles, credit, real estate, retirement, and markets, no jargon, no gatekeeping.">
+<link rel="canonical" href="https://neximious.com/issue-001.html">
+<meta property="og:title" content="NEXIMIOUS — The Money Movement Magazine">
+<meta property="og:description" content="Real personal finance content on side hustles, credit, real estate, retirement, and markets — no jargon, no gatekeeping.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://neximious.com/">
-<meta property="og:image" content="https://neximious.com/images/credit-score-glowup-og.jpg">
+<meta property="og:url" content="https://neximious.com/issue-001.html">
+<meta property="og:image" content="https://neximious.com/images/retirement-100-a-month-hero.png">
 <meta property="og:site_name" content="Neximious">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NEXIMIOUS — Issue 002">
-<meta name="twitter:description" content="Insurance, credit from zero, taxes, BNPL risk, and financial milestones by decade.">
-<meta name="twitter:image" content="https://neximious.com/images/credit-score-glowup-og.jpg">
+<meta name="twitter:title" content="NEXIMIOUS — The Money Movement Magazine">
+<meta name="twitter:description" content="Real personal finance content on side hustles, credit, real estate, retirement, and markets — no jargon, no gatekeeping.">
+<meta name="twitter:image" content="https://neximious.com/images/retirement-100-a-month-hero.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Neximious",
   "url": "https://neximious.com/",
-  "logo": "https://neximious.com/images/credit-score-glowup-og.jpg",
+  "logo": "https://neximious.com/images/retirement-100-a-month-hero.png",
   "sameAs": []
 }
 </script>
@@ -318,70 +318,6 @@ var infolinks_wsid = 0;
     color:rgba(255,255,255,0.04);
     user-select:none;
   }
-
-  /* ===== CAROUSEL ===== */
-  .carousel-section{max-width:1180px;margin:0 auto;padding:40px 20px 20px;}
-  .carousel-head{text-align:center;margin-bottom:22px;}
-  .carousel-head .kicker{
-    font-family:'Space Mono',monospace;color:var(--blood);background:#000;display:inline-block;
-    padding:4px 10px;font-size:12px;letter-spacing:.15em;border:1px solid var(--blood);
-  }
-  .carousel{position:relative;overflow:hidden;}
-  .carousel-track{position:relative;min-height:520px;}
-  .carousel-slide{
-    position:absolute;inset:0;opacity:0;pointer-events:none;
-    transition:opacity .5s ease;
-    display:grid;grid-template-columns:1.1fr 0.9fr;gap:36px;align-items:center;
-  }
-  .carousel-slide.active{opacity:1;pointer-events:auto;}
-  @media(max-width:820px){.carousel-slide{grid-template-columns:1fr;}}
-  .carousel-slide .cover-art{
-    position:relative;aspect-ratio:4/5;border:4px solid var(--gold);
-    box-shadow:0 0 0 2px #000, 10px 10px 0 rgba(0,0,0,.5);
-    background:repeating-linear-gradient(115deg, rgba(255,255,255,.03) 0 2px, transparent 2px 6px),
-      linear-gradient(160deg, #143d2c 0%, #0b0b0b 55%, #241a05 100%);
-    overflow:hidden;
-  }
-  .carousel-slide .flag{
-    position:absolute;top:16px; left:-38px;background:var(--blood);color:#fff;
-    font-family:'Anton',sans-serif;font-size:14px;letter-spacing:0.08em;padding:6px 50px;
-    transform:rotate(-38deg);box-shadow:0 3px 8px rgba(0,0,0,.6);z-index:5;
-  }
-  .carousel-slide .stack{
-    position:absolute;bottom:0;left:0;right:0;padding:16px 18px 20px;
-    background:linear-gradient(0deg, rgba(0,0,0,.85), transparent);
-  }
-  .carousel-slide .stack .k{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--gold-bright);}
-  .carousel-slide .stack .v{font-family:'Anton',sans-serif;font-size:28px;color:#fff;}
-  .carousel-copy .kicker{
-    font-family:'Space Mono',monospace;color:var(--blood);background:#000;display:inline-block;
-    padding:4px 10px;font-size:12px;letter-spacing:.15em;border:1px solid var(--blood);margin-bottom:14px;
-  }
-  .carousel-copy h2{font-size:clamp(28px,4.5vw,48px);line-height:0.98;margin:0 0 14px;}
-  .carousel-copy p.dek{
-    font-size:17px;line-height:1.55;color:var(--paper-dim);font-style:italic;
-    border-left:3px solid var(--gold);padding-left:16px;margin-bottom:20px;
-  }
-  .carousel-copy .byline{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;color:var(--gold-bright);}
-  .carousel-copy .cta-row{margin-top:22px;}
-
-  .car-arrow{
-    position:absolute;top:50%;transform:translateY(-50%);z-index:10;
-    width:44px;height:44px;border:2px solid var(--gold);background:#000;color:var(--gold-bright);
-    font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;
-    transition:background .15s;
-  }
-  .car-arrow:hover{background:var(--blood);color:#fff;}
-  .car-arrow.left{left:-10px;}
-  .car-arrow.right{right:-10px;}
-  @media(max-width:820px){.car-arrow{display:none;}}
-
-  .carousel-dots{display:flex;justify-content:center;gap:10px;margin-top:20px;}
-  .dot{
-    width:12px;height:12px;border:2px solid var(--gold);background:transparent;
-    cursor:pointer;transition:background .15s;padding:0;
-  }
-  .dot.active{background:var(--gold-bright);}
 
   .cover-copy .kicker{
     font-family:'Space Mono',monospace;
@@ -772,7 +708,7 @@ var infolinks_wsid = 0;
 <body>
 
   <div class="indicia">
-    <div>ISSUE NO. 002 &nbsp;•&nbsp; FALL '26 &nbsp;•&nbsp; PRINTED IN THE STREETS</div>
+    <div>ISSUE NO. 001 &nbsp;•&nbsp; SUMMER '26 &nbsp;•&nbsp; PRINTED IN THE STREETS</div>
     <div class="barcode" aria-hidden="true">
       <span style="height:22px"></span><span style="height:14px"></span><span style="height:20px"></span><span style="height:10px"></span><span style="height:22px"></span><span style="height:16px"></span><span style="height:20px"></span><span style="height:12px"></span><span style="height:22px"></span><span style="height:18px"></span>
     </div>
@@ -832,241 +768,182 @@ var infolinks_wsid = 0;
   </script>
 
 
-  <section id="cover" class="carousel-section">
-    <div class="carousel-head">
-      <span class="kicker">◆ ISSUE 002 — TOP 5 READS</span>
-    </div>
-    <div class="carousel" id="coverCarousel">
-      <div class="carousel-track">
-
-        <div class="carousel-slide active" data-slide="0">
-          <div class="cover-art">
-            <div class="thumb-art">
-              <img class="thumb-photo" src="images/taxes-101-hero.jpg" alt="Illustration of a woman filing taxes online with holographic tax data, forms, receipts, and IRS e-file panels floating around her laptop">
-            </div>
-            <div class="flag">TIMELY</div>
-            <div class="stack"><div class="k">TOP READ 01</div><div class="v">TAXES 101</div></div>
-          </div>
-          <div class="carousel-copy">
-            <span class="kicker">◆ FILING SEASON READ</span>
-            <h2 class="display">TAXES 101: WHAT ACTUALLY HAPPENS WHEN YOU FILE</h2>
-            <p class="dek">Brackets, deductions, credits, refunds — a plain-language walkthrough of what actually happens between January and April.</p>
-            <div class="byline">WORDS BY THE NEXIMIOUS DESK &nbsp;•&nbsp; 9 MIN READ</div>
-            <div class="cta-row"><a class="btn" href="taxes-101.html">READ THE STORY</a></div>
-          </div>
-        </div>
-
-        <div class="carousel-slide" data-slide="1">
-          <div class="cover-art">
-            <div class="thumb-art">
-              <img class="thumb-photo" src="images/building-credit-from-scratch-hero.jpg" alt="Illustration of a smiling woman unboxing a new credit card at a coffee shop with a credit score meter reading 750 glowing beside her">
-            </div>
-            <div class="flag">STARTER GUIDE</div>
-            <div class="stack"><div class="k">TOP READ 02</div><div class="v">CREDIT FROM ZERO</div></div>
-          </div>
-          <div class="carousel-copy">
-            <span class="kicker">◆ CREDIT DESK</span>
-            <h2 class="display">BUILDING CREDIT FROM ZERO: THE FIRST 12 MONTHS</h2>
-            <p class="dek">No credit history at all? Exactly how to build a real credit file from nothing — secured cards, authorized-user status, and the timeline to expect.</p>
-            <div class="byline">WORDS BY THE NEXIMIOUS DESK &nbsp;•&nbsp; 8 MIN READ</div>
-            <div class="cta-row"><a class="btn" href="building-credit-from-scratch.html">READ THE STORY</a></div>
-          </div>
-        </div>
-
-        <div class="carousel-slide" data-slide="2">
-          <div class="cover-art">
-            <div class="thumb-art">
-              <img class="thumb-photo" src="images/insurance-basics-hero.jpg" alt="Illustration of a man reviewing an insurance policy on his laptop at home with a glowing protective shield icon beside him">
-            </div>
-            <div class="flag">MYTH-BUSTED</div>
-            <div class="stack"><div class="k">TOP READ 03</div><div class="v">INSURANCE, HONESTLY</div></div>
-          </div>
-          <div class="carousel-copy">
-            <span class="kicker">◆ WEALTH DESK</span>
-            <h2 class="display">THE INSURANCE YOU ACTUALLY NEED VS. THE INSURANCE YOU'RE SOLD</h2>
-            <p class="dek">Health, auto, renters, life, disability — which is genuinely essential, which is situational, and which is mostly upsell.</p>
-            <div class="byline">WORDS BY THE NEXIMIOUS DESK &nbsp;•&nbsp; 10 MIN READ</div>
-            <div class="cta-row"><a class="btn" href="insurance-basics.html">READ THE STORY</a></div>
-          </div>
-        </div>
-
-        <div class="carousel-slide" data-slide="4">
-          <div class="cover-art">
-            <div class="thumb-art">
-              <img class="thumb-photo" src="images/money-and-relationships-hero.jpg" alt="Illustration of a couple talking on the couch surrounded by floating question marks, currency symbols, and gears representing differing money mindsets">
-            </div>
-            <div class="flag">REAL TALK</div>
-            <div class="stack"><div class="k">TOP READ 05</div><div class="v">MONEY &amp; LOVE</div></div>
-          </div>
-          <div class="carousel-copy">
-            <span class="kicker">◆ WEALTH DESK</span>
-            <h2 class="display">MONEY AND RELATIONSHIPS: THE CONVERSATION MOST COUPLES AVOID</h2>
-            <p class="dek">Financial disagreements are consistently cited as a top predictor of relationship strain. Here's how to structure the conversation couples tend to avoid.</p>
-            <div class="byline">WORDS BY THE NEXIMIOUS DESK &nbsp;•&nbsp; 8 MIN READ</div>
-            <div class="cta-row"><a class="btn" href="money-and-relationships.html">READ THE STORY</a></div>
-          </div>
-        </div>
-
+  <section id="cover" class="cover">
+    <div class="cover-art">
+      <div class="thumb-art">
+        <img class="thumb-photo" src="images/retirement-100-a-month-hero.png" alt="Illustration of a young man looking out at a city skyline sunset with a money tree growing from his phone, symbolizing financial growth">
       </div>
-      <button class="car-arrow left" id="carPrev" aria-label="Previous">&#8249;</button>
-      <button class="car-arrow right" id="carNext" aria-label="Next">&#8250;</button>
-      <div class="carousel-dots" id="carDots"></div>
+      <div class="flag">EXCLUSIVE</div>
+      <div class="stack">
+        <div class="k">COVER STORY</div>
+        <div class="v">STACKING PAPER</div>
+      </div>
+    </div>
+    <div class="cover-copy">
+      <span class="kicker">◆ THE BIG READ</span>
+      <h2 class="display">HOW A GENERATION IS BUILDING WEALTH FROM NOTHING</h2>
+      <p class="dek">No trust fund. No inside connect. Just a budget, a brokerage account, and the refusal to stay broke. This is the real story behind the money moves nobody's talking about.</p>
+      <div class="byline">WORDS BY THE NEXIMIOUS DESK &nbsp;•&nbsp; 9 MIN READ</div>
+      <div class="cta-row">
+        <a class="btn" href="#reports">READ THE STORY</a>
+        <a class="btn ghost" href="#subscribe">GET THE MAGAZINE</a>
+      </div>
     </div>
   </section>
 
   <section id="reports" class="section">
     <div class="section-head">
       <h3 class="display">Street Reports</h3>
-      <span class="sub">ISSUE 002 &mdash; ALL 12 REPORTS</span>
+      <span class="sub">THIS WEEK'S MONEY MOVES</span>
     </div>
     <div class="grid">
-      <a class="card" href="negotiating-rent-increase.html">
-        <div class="thumb" data-tag="REAL TALK">
+      <a class="card" href="side-hustle-math.html">
+        <div class="thumb" data-tag="HUSTLE">
           <div class="thumb-art">
-            <img class="thumb-photo" src="images/negotiating-rent-increase-hero.jpg" alt="Illustration of a young man reading a lease renewal notice showing a 3.5 percent rent increase against a city skyline">
+            <img class="thumb-photo" src="images/side-hustle-math-hero.png" alt="Illustration of a woman working on a laptop with side hustle finances, tax percentages, and spreadsheet data displayed around her">
           </div>
         </div>
         <div class="body">
-          <h4>YOUR RENT JUST WENT UP: WHAT YOU CAN ACTUALLY DO</h4>
-          <p>A rent increase notice isn't always final. How to research your position and what to say.</p>
-          <div class="meta"><span>REAL ESTATE</span><span>8 MIN</span></div>
+          <h4>THE SIDE HUSTLE MATH NOBODY ACTUALLY RUNS</h4>
+          <p>Extra income sounds great until you price your own time. Here's how to find your true hourly rate before you start — or before you quit your day job.</p>
+          <div class="meta"><span>WEALTH DESK</span><span>9 MIN</span></div>
         </div>
       </a>
-
-      <a class="card" href="index-funds-vs-stock-picking.html">
+      <a class="card" href="market-movers.html">
         <div class="thumb" data-tag="MARKETS">
           <div class="thumb-art">
-            <img class="thumb-photo" src="images/index-funds-vs-stock-picking-hero.jpg" alt="Illustration of a man reviewing a tablet with holographic comparison panels showing broad market index funds versus individual stock picks">
+            <img class="thumb-photo" src="images/market-movers-hero.png" alt="Illustration of a man reviewing holographic sector performance charts and pie graphs on a transparent display">
           </div>
         </div>
         <div class="body">
-          <h4>INDEX FUNDS VS. PICKING YOUR OWN STOCKS</h4>
-          <p>The data on professional fund managers beating the market is not encouraging.</p>
+          <h4>WHO'S GETTING PAID: HOW TO READ A "HOT SECTOR"</h4>
+          <p>Sector leadership rotates every year. The skill isn't picking the winner — it's not chasing it after the headlines already have.</p>
           <div class="meta"><span>MARKETS DESK</span><span>9 MIN</span></div>
         </div>
       </a>
-      <a class="card" href="identity-theft-protection.html">
-        <div class="thumb" data-tag="EXPOSED">
+      <a class="card" href="credit-score-glowup.html">
+        <div class="thumb" data-tag="CREDIT">
           <div class="thumb-art">
-            <img class="thumb-photo" src="images/identity-theft-protection-hero.jpg" alt="Illustration of a woman at her laptop receiving a data breach alert with unauthorized access warning icons around her">
+            <img class="thumb-photo" src="images/credit-score-glowup-hero.png" alt="Split illustration of a woman going from a stressed low credit score of 500 to a confident high credit score of 750">
           </div>
         </div>
         <div class="body">
-          <h4>YOU'VE BEEN BREACHED: WHAT ACTUALLY MATTERS AFTER A DATA LEAK</h4>
-          <p>A breach notification is alarming but rarely means immediate disaster.</p>
-          <div class="meta"><span>INVESTIGATIONS</span><span>8 MIN</span></div>
+          <h4>THE CREDIT SCORE GLOW-UP: 500 TO 750</h4>
+          <p>No shortcuts, no scams — just the unglamorous routine that actually rebuilds your score.</p>
+          <div class="meta"><span>CREDIT DESK</span><span>10 MIN</span></div>
+        </div>
+      </a>
+      <a class="card" href="rent-vs-own.html">
+        <div class="thumb" data-tag="REAL TALK">
+          <div class="thumb-art">
+            <img class="thumb-photo" src="images/rent-vs-own-hero.png" alt="Illustration of a couple weighing a decision between a house key and city skyline on a glowing balance scale">
+          </div>
+        </div>
+        <div class="body">
+          <h4>RENT VS. OWN: THE MATH NOBODY SHOWS YOU</h4>
+          <p>"Renting is throwing money away" skips almost everything that actually determines the answer. Here's the real comparison.</p>
+          <div class="meta"><span>REAL ESTATE</span><span>11 MIN</span></div>
+        </div>
+      </a>
+      <a class="card" href="retirement-100-a-month.html">
+        <div class="thumb" data-tag="RETIRE">
+          <div class="thumb-art">
+            <img class="thumb-photo" src="images/retirement-100-a-month-hero.png" alt="Illustration of a young man looking out at a city skyline sunset with a money tree growing from his phone, symbolizing financial growth">
+          </div>
+        </div>
+        <div class="body">
+          <h4>THE $100 A MONTH THAT BECOMES $200K</h4>
+          <p>Compound growth rewards the person who starts earliest, not the one with the biggest deposit. Here's the actual math.</p>
+          <div class="meta"><span>RETIREMENT</span><span>8 MIN</span></div>
+        </div>
+      </a>
+      <a class="card" href="hidden-fees-exposed.html">
+        <div class="thumb" data-tag="EXPOSED">
+          <div class="thumb-art">
+            <img class="thumb-photo" src="images/hidden-fees-exposed-hero.jpg" alt="Split illustration contrasting a stressful 5% fast food transaction fee with a peaceful .01% retirement scene of a couple on a cruise, illustrating how small fees compound over time">
+          </div>
+        </div>
+        <div class="body">
+          <h4>EXPOSED: THE FEES QUIETLY EATING YOUR PORTFOLIO</h4>
+          <p>Expense ratios, advisory fees, trading costs — none show up as a single line item. Here's how to actually audit what you're paying.</p>
+          <div class="meta"><span>INVESTIGATIONS</span><span>9 MIN</span></div>
         </div>
       </a>
 
-      <a class="card" href="filing-taxes-side-income.html">
-        <div class="thumb" data-tag="HUSTLE">
+      <a class="card" href="emergency-fund.html">
+        <div class="thumb" data-tag="SAFETY NET">
           <div class="thumb-art">
-            <img class="thumb-photo" src="images/filing-taxes-side-income-hero.jpg" alt="Illustration of a freelance illustrator at his desk with a 1099-NEC tax form and a glowing 30 percent tax set-aside safe icon beside him">
+            <img class="thumb-photo" src="images/emergency-fund-hero.jpg" alt="Illustration of a family looking at a home computer showing a savings tracker with progress toward a home down payment goal">
           </div>
         </div>
         <div class="body">
-          <h4>FILING TAXES WHEN YOU HAVE SIDE INCOME</h4>
-          <p>1099 income comes with tax obligations W-2 employees never deal with.</p>
+          <h4>THE EMERGENCY FUND NUMBER NOBODY AGREES ON</h4>
+          <p>Three months of expenses? Six? A flat $1,000? Here's how to actually pick your target and where to keep the money.</p>
+          <div class="meta"><span>WEALTH DESK</span><span>8 MIN</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="debt-payoff-strategy.html">
+        <div class="thumb" data-tag="DEBT">
+          <div class="thumb-art">
+            <img class="thumb-photo" src="images/debt-payoff-strategy-hero.jpg" alt="Illustration of a woman working on a laptop with holographic Avalanche and Snowball debt payoff method visuals floating around her">
+          </div>
+        </div>
+        <div class="body">
+          <h4>AVALANCHE VS. SNOWBALL: THE DEBT PAYOFF FIGHT, SETTLED</h4>
+          <p>One method saves you the most money. The other, you're more likely to actually finish. Here's how to pick.</p>
+          <div class="meta"><span>CREDIT DESK</span><span>9 MIN</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="first-time-investing.html">
+        <div class="thumb" data-tag="INVESTING 101">
+          <div class="thumb-art">
+            <img class="thumb-photo" src="images/first-time-investing-hero.jpg" alt="Illustration of a young woman checking investment charts on her phone at a coffee shop, with glowing stock candlestick charts in the background">
+          </div>
+        </div>
+        <div class="body">
+          <h4>OPENING YOUR FIRST BROKERAGE ACCOUNT</h4>
+          <p>Account types, order types, and the handful of decisions that actually matter — without the jargon overload.</p>
+          <div class="meta"><span>MARKETS DESK</span><span>10 MIN</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="budgeting-frameworks.html">
+        <div class="thumb" data-tag="BUDGETING">
+          <div class="thumb-art">
+            <img class="thumb-photo" src="images/budgeting-frameworks-hero.jpg" alt="Three-panel illustration showing a 50/30/20 budget pie chart, a detailed zero-based budget spreadsheet, and a person holding labeled cash envelopes">
+          </div>
+        </div>
+        <div class="body">
+          <h4>WHICH BUDGET ACTUALLY WORKS?</h4>
+          <p>50/30/20 vs. zero-based vs. cash envelope — compared honestly, so you can stop switching every few months.</p>
+          <div class="meta"><span>WEALTH DESK</span><span>9 MIN</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="salary-negotiation.html">
+        <div class="thumb" data-tag="HUSTLE">
+          <div class="thumb-art">
+            <img class="thumb-photo" src="images/salary-negotiation-hero.jpg" alt="Illustration of a man confidently negotiating during a video call with colleagues, city lights visible through the office window at night">
+          </div>
+        </div>
+        <div class="body">
+          <h4>THE SALARY NEGOTIATION SCRIPT NOBODY TEACHES YOU</h4>
+          <p>Most people leave money on the table not by asking for too much, but by never asking at all.</p>
           <div class="meta"><span>HUSTLE DESK</span><span>9 MIN</span></div>
         </div>
       </a>
 
-      <a class="card" href="hsa-fsa-explained.html">
-        <div class="thumb" data-tag="WEALTH">
+      <a class="card" href="understanding-your-paycheck.html">
+        <div class="thumb" data-tag="PAYCHECK">
           <div class="thumb-art">
-            <img class="thumb-photo" src="images/hsa-fsa-explained-hero.jpg" alt="Illustration of a man comparing FSA use-it-or-lose-it rules against HSA triple tax advantage benefits on his tablet">
+            <img class="thumb-photo" src="images/understanding-your-paycheck-hero.jpg" alt="Illustration of a man explaining a holographic paycheck breakdown showing gross pay, FICA, Medicare, state tax, and net pay to a coworker">
           </div>
         </div>
         <div class="body">
-          <h4>HSA VS. FSA: THE ACCOUNT NOBODY EXPLAINS PROPERLY</h4>
-          <p>They sound similar but work very differently — especially around unused money.</p>
-          <div class="meta"><span>WEALTH DESK</span><span>8 MIN</span></div>
-        </div>
-      </a>
-      <a class="card" href="buying-vs-leasing-a-car.html">
-        <div class="thumb" data-tag="REAL TALK">
-          <div class="thumb-art">
-            <img class="thumb-photo" src="images/buying-vs-leasing-a-car-hero.jpg" alt="Illustration of a man comparing lease versus own options on his laptop, with floating panels showing monthly payments and long-term ownership benefits">
-          </div>
-        </div>
-        <div class="body">
-          <h4>BUYING VS. LEASING A CAR</h4>
-          <p>The actual comparison depends on how long you keep it and how you value flexibility.</p>
-          <div class="meta"><span>REAL ESTATE</span><span>8 MIN</span></div>
-        </div>
-      </a>
-
-      <a class="card" href="401k-rollover-job-change.html">
-        <div class="thumb" data-tag="RETIRE">
-          <div class="thumb-art">
-            <img class="thumb-photo" src="images/401k-transition-hero.jpg" alt="Illustration of a professional reviewing direct rollover and IRA options on a tablet against a city skyline at dusk">
-          </div>
-        </div>
-        <div class="body">
-          <h4>YOU CHANGED JOBS. WHAT HAPPENS TO YOUR OLD 401(K)?</h4>
-          <p>Leaving a job doesn't mean losing it — the options have very different consequences.</p>
-          <div class="meta"><span>RETIREMENT</span><span>7 MIN</span></div>
-        </div>
-      </a>
-
-      <a class="card" href="financial-milestones-by-decade.html">
-        <div class="thumb" data-tag="RETIRE">
-          <div class="thumb-art">
-            <img class="thumb-photo" src="images/financial-milestones-by-decade-hero.jpg" alt="Illustration of a woman reviewing a financial roadmap on her tablet with floating labels for 20s Foundation, 30s Growth, 40s Peak, and 50s Catch-Up">
-          </div>
-        </div>
-        <div class="body">
-          <h4>FINANCIAL MILESTONES BY DECADE</h4>
-          <p>Viral "you should have X saved by age Y" charts cause more anxiety than clarity.</p>
-          <div class="meta"><span>RETIREMENT</span><span>9 MIN</span></div>
-        </div>
-      </a>
-
-      <a class="card" href="insurance-basics.html">
-        <div class="thumb" data-tag="WEALTH">
-          <div class="thumb-art">
-            <img class="thumb-photo" src="images/insurance-basics-hero.jpg" alt="Illustration of a man reviewing an insurance policy on his laptop at home with a glowing protective shield icon beside him">
-          </div>
-        </div>
-        <div class="body">
-          <h4>THE INSURANCE YOU ACTUALLY NEED VS. THE INSURANCE YOU'RE SOLD</h4>
-          <p>Health, auto, renters, life, disability — which is genuinely essential, and which is mostly upsell.</p>
-          <div class="meta"><span>WEALTH DESK</span><span>10 MIN</span></div>
-        </div>
-      </a>
-      <a class="card" href="building-credit-from-scratch.html">
-        <div class="thumb" data-tag="CREDIT">
-          <div class="thumb-art">
-            <img class="thumb-photo" src="images/building-credit-from-scratch-hero.jpg" alt="Illustration of a smiling woman unboxing a new credit card at a coffee shop with a credit score meter reading 750 glowing beside her">
-          </div>
-        </div>
-        <div class="body">
-          <h4>BUILDING CREDIT FROM ZERO: THE FIRST 12 MONTHS</h4>
-          <p>No credit history at all? Here's exactly how to build a credit file from nothing.</p>
-          <div class="meta"><span>CREDIT DESK</span><span>8 MIN</span></div>
-        </div>
-      </a>
-      <a class="card" href="taxes-101.html">
-        <div class="thumb" data-tag="WEALTH">
-          <div class="thumb-art">
-            <img class="thumb-photo" src="images/taxes-101-hero.jpg" alt="Illustration of a woman filing taxes online with holographic tax data, forms, receipts, and IRS e-file panels floating around her laptop">
-          </div>
-        </div>
-        <div class="body">
-          <h4>TAXES 101: WHAT ACTUALLY HAPPENS WHEN YOU FILE</h4>
-          <p>Brackets, deductions, credits, refunds — a plain-language walkthrough of filing.</p>
-          <div class="meta"><span>WEALTH DESK</span><span>9 MIN</span></div>
-        </div>
-      </a>
-      <a class="card" href="money-and-relationships.html">
-        <div class="thumb" data-tag="WEALTH">
-          <div class="thumb-art">
-            <img class="thumb-photo" src="images/money-and-relationships-hero.jpg" alt="Illustration of a couple talking on the couch surrounded by floating question marks, currency symbols, and gears representing differing money mindsets">
-          </div>
-        </div>
-        <div class="body">
-          <h4>MONEY AND RELATIONSHIPS: THE CONVERSATION MOST COUPLES AVOID</h4>
-          <p>Financial disagreements are a top predictor of relationship strain.</p>
+          <h4>READING YOUR PAYCHECK: WHAT THE DEDUCTIONS MEAN</h4>
+          <p>Federal withholding, FICA, gross vs. net — a plain-language breakdown of every line on a typical paycheck.</p>
           <div class="meta"><span>WEALTH DESK</span><span>8 MIN</span></div>
         </div>
       </a>
@@ -1088,7 +965,7 @@ var infolinks_wsid = 0;
         <div class="cap">THE DON, IN HIS OFFICE</div>
       </div>
       <div>
-        <p class="qtext">Insurance, credit, taxes — none of it is exciting. That's exactly why most people never learn it, and exactly why the ones who do end up ahead. Boring and correct beats exciting and broke, every single time.</p>
+        <p class="qtext">You don't need a hundred thousand dollars to start investing. You need a hundred dollars and the discipline to leave it alone. Everybody wants the come-up story — nobody wants the boring part where you just don't touch the money.</p>
         <div class="sign display">— THE DON</div>
       </div>
     </div>
@@ -1100,9 +977,9 @@ var infolinks_wsid = 0;
       <span class="sub">NEXIMIOUS BY THE DIGITS</span>
     </div>
     <div class="stat-strip">
-      <div class="stat"><div class="num gold-text">438K</div><div class="lbl">READERS THIS ISSUE</div></div>
-      <div class="stat"><div class="num gold-text">$2.1M</div><div class="lbl">TRACKED IN READER PORTFOLIOS</div></div>
-      <div class="stat"><div class="num gold-text">68</div><div class="lbl">CITIES REPPING NEXIMIOUS</div></div>
+      <div class="stat"><div class="num gold-text">412K</div><div class="lbl">READERS THIS ISSUE</div></div>
+      <div class="stat"><div class="num gold-text">$1.8M</div><div class="lbl">TRACKED IN READER PORTFOLIOS</div></div>
+      <div class="stat"><div class="num gold-text">63</div><div class="lbl">CITIES REPPING NEXIMIOUS</div></div>
       <div class="stat"><div class="num gold-text">7</div><div class="lbl">YEARS ON THE GRIND</div></div>
     </div>
   </section>
@@ -1132,52 +1009,6 @@ var infolinks_wsid = 0;
       <span>NEXT SITE ►</span>
     </div>
   </footer>
-
-  <script>
-    (function(){
-      const slides = document.querySelectorAll('.carousel-slide');
-      const dotsWrap = document.getElementById('carDots');
-      const prevBtn = document.getElementById('carPrev');
-      const nextBtn = document.getElementById('carNext');
-      let current = 0;
-      let timer;
-
-      slides.forEach((_, i) => {
-        const dot = document.createElement('button');
-        dot.className = 'dot' + (i === 0 ? ' active' : '');
-        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-        dot.addEventListener('click', () => goTo(i));
-        dotsWrap.appendChild(dot);
-      });
-      const dots = dotsWrap.querySelectorAll('.dot');
-
-      function goTo(i){
-        slides[current].classList.remove('active');
-        dots[current].classList.remove('active');
-        current = (i + slides.length) % slides.length;
-        slides[current].classList.add('active');
-        dots[current].classList.add('active');
-        resetTimer();
-      }
-
-      function next(){ goTo(current + 1); }
-      function prev(){ goTo(current - 1); }
-
-      function resetTimer(){
-        clearInterval(timer);
-        timer = setInterval(next, 6000);
-      }
-
-      nextBtn.addEventListener('click', next);
-      prevBtn.addEventListener('click', prev);
-
-      const carousel = document.getElementById('coverCarousel');
-      carousel.addEventListener('mouseenter', () => clearInterval(timer));
-      carousel.addEventListener('mouseleave', resetTimer);
-
-      resetTimer();
-    })();
-  </script>
 
 </body>
 </html>
